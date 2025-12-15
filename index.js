@@ -83,18 +83,6 @@ function createItem(item) {  // возвращает готовый HTML-эле�
         updateStorage();
     });
 
-    // Обработчик для сохранения при нажатии Enter
-    textElement.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            textElement.blur();
-        } else if (e.key === 'Escape') {
-            e.preventDefault();
-            textElement.textContent = item;
-            textElement.blur();
-        }
-    });
-
     return clone;
 }
 
